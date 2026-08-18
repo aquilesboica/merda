@@ -1,20 +1,66 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Card Game Online
 
-# Run and deploy your AI Studio app
+Multiplayer online card game built with Next.js, TypeScript, and Socket.io
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1y3E1yaboWLC2UrQGWWCbkhBOS4J8sMIh
+✅ Real-time multiplayer gameplay
+✅ Card dealing and hand management
+✅ Turn-based gameplay
+✅ Score tracking
+✅ WebSocket communication for instant updates
 
-## Run Locally
+## Installation
 
-**Prerequisites:**  Node.js
+```bash
+npm install
+```
 
+## Running the Game
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Development Mode
+
+```bash
+npm run dev
+```
+
+This starts both the Next.js frontend (port 3000) and Socket.io backend (port 3001).
+
+### Production Build
+
+```bash
+npm run build
+npm start
+```
+
+## Game Rules
+
+1. Create or join a room with a friend
+2. Each player starts with 5 cards
+3. Take turns playing cards from your hand
+4. Your score increases by the card's power level
+5. A new card is drawn after each play
+6. First player to reach 50 points wins!
+
+## Tech Stack
+
+- **Frontend**: Next.js 14, React 18, Tailwind CSS
+- **Backend**: Express, Socket.io, TypeScript
+- **Real-time Communication**: WebSocket (Socket.io)
+- **Cards**: Standard 52-card deck
+
+## Architecture
+
+server/ - Backend Socket.io server
+app/ - Next.js frontend
+components/ - React components
+
+## Future Enhancements
+
+- Authentication system
+- Persistent player profiles
+- Leaderboards
+- Different card games
+- Card animations
+- Sound effects
+- Mobile optimization
